@@ -615,21 +615,35 @@ function setGameState(_state, command, randomseed) {
 
 
 	if (canYoutube) {
-		if ('youtube' in state.metadata) {
-			var youtubeid=state.metadata['youtube'];
-			var url = "https://youtube.googleapis.com/v/"+youtubeid+"?autoplay=1&loop=1&playlist="+youtubeid;
-			ifrm = document.createElement("IFRAME");
-			ifrm.setAttribute("src",url);
-			ifrm.style.visibility="hidden";
-			ifrm.style.width="500px";
-			ifrm.style.height="500px";
-			ifrm.style.position="absolute";
-			ifrm.style.top="-1000px";
-			ifrm.style.left="-1000px";
-//			ifrm.style.display="none";
-			document.body.appendChild(ifrm);
-		}
-
+	    if ('youtube' in state.metadata) {
+		var youtubeid=state.metadata['youtube'];
+		var url = "https://youtube.googleapis.com/v/"+youtubeid+"?autoplay=1&loop=1&playlist="+youtubeid;
+		ifrm = document.createElement("IFRAME");
+		ifrm.setAttribute("src",url);
+		ifrm.style.visibility="hidden";
+		ifrm.style.width="500px";
+		ifrm.style.height="500px";
+		ifrm.style.position="absolute";
+		ifrm.style.top="-1000px";
+		ifrm.style.left="-1000px";
+		//			ifrm.style.display="none";
+		document.body.appendChild(ifrm);
+	    }
+	    else if ('music' in state.metadata) {
+		var musicid=state.metadata['music'];
+		var url = musicid;
+		ifrm = document.createElement("IFRAME");
+		ifrm.setAttribute("src",url);
+		ifrm.style.visibility="hidden";
+		ifrm.style.width="500px";
+		ifrm.style.height="500px";
+		ifrm.style.position="absolute";
+		ifrm.style.top="-1000px";
+		ifrm.style.left="-1000px";
+		//			ifrm.style.display="none";
+		document.body.appendChild(ifrm);
+	    }
+	    
 		/*
 		if ('youtube' in state.metadata) {
 			var div_container = document.createElement('DIV');

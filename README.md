@@ -5,6 +5,16 @@ Open Source HTML5 Puzzle Game Engine
 
 Try it out at http://www.puzzlescript.net
 
+This is a little fork of PuzzleScript by James T. Perconti, which hacks a more
+general feature for background music out of the existing youtube feature.
+It allows you to add the following keyword to the preamble:
+
+music http://www.mysong.com
+    Loads another page hidden in the background so that music from that page
+    will play during the game. This is just a quick hack of the youtube keyword
+    to accept any full URL (instead of a youtube video ID). It's not very robust
+    but it should at least allow you to run a Beepbox tune with your game.
+
 -----
 
 The MIT License (MIT)
